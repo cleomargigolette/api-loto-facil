@@ -1,15 +1,26 @@
 package com.bi.lotofacil.controller;
 
-import com.bi.lotofacil.service.SorteioService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
+@RequestMapping(value = "/loto-facil")
 public class AnaliseController {
-    @Autowired
-    private SorteioService service;
 
-    public String teste (){
-        return service.teste();
+    @GetMapping
+    public List<List<Long>> sorteios() {
+        return null;
+    }
+
+    @GetMapping("tendencia/{bola}")
+    public Long tendenciaBol(@PathVariable("bola") Long bol) {
+        return null;
+    }
+
+    @GetMapping("/{bola}")
+    public Long vezesQueSaiuNosSorteios(@PathVariable("bola") Long bol) {
+        return null;
     }
 }
