@@ -2,18 +2,16 @@ package com.bi.lotofacil.modail;
 
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.GenericGenerators;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Transient;
+import javax.persistence.*;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Builder
+@Table(name = "ball")
 public class Ball {
 
     @Id
@@ -32,4 +30,12 @@ public class Ball {
 
     @Transient
     private Long totalOccurrence;
+
+    @ManyToMany
+    @JoinTable(name = "sweepstake_ball",
+            joinColumns = @JoinColumn(name = "ball_id"),
+            inverseJoinColumns = @JoinColumn(name = "sweepstakes_id"))
+    public List<Sweepstakes> sweepstakes;
+
+
 }

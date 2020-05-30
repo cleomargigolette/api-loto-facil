@@ -9,6 +9,7 @@ import java.util.List;
 
 @Service
 public class BallService {
+
     @Autowired
     private BallRepository ballRepository;
 
@@ -17,11 +18,17 @@ public class BallService {
         return this.ballRepository.save(ball);
     }
 
-    public Ball findById(Long idBall){
+    public Ball findById(Long idBall) {
         return ballRepository.findById(idBall).get();
     }
 
-    public List<Ball> findAllBall(){
+    public List<Ball> findAllBall() {
         return this.ballRepository.findAll();
+    }
+
+    public void createBall(){
+        for (int i = 1; i < 26; i++){
+            this.saveBall( new Long(i));
+        }
     }
 }
