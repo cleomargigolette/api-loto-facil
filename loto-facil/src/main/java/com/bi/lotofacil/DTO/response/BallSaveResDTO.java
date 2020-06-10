@@ -17,7 +17,7 @@ public class BallSaveResDTO {
     private Long id;
     private Long name;
 
-    public static BallSaveResDTO of(Ball ball){
+    public static BallSaveResDTO of(Ball ball) {
         BallSaveResDTO dto = BallSaveResDTO.builder()
                 .id(ball.getId())
                 .name(ball.getName())
@@ -25,7 +25,7 @@ public class BallSaveResDTO {
         return dto;
     }
 
-    public static List<BallSaveResDTO> findAll(List<Ball> listBall){
+    public static List<BallSaveResDTO> findAll(List<Ball> listBall) {
         List<BallSaveResDTO> listDto = new ArrayList<BallSaveResDTO>();
         listBall.forEach(ball -> {
             listDto.add(of(ball));

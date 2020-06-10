@@ -31,7 +31,7 @@ public class Ball {
     @Transient
     private Long totalOccurrence;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "sweepstake_ball",
             joinColumns = @JoinColumn(name = "ball_id"),
             inverseJoinColumns = @JoinColumn(name = "sweepstakes_id"))

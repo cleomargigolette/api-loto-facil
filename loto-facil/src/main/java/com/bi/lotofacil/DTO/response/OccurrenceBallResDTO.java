@@ -11,7 +11,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class OccurrenceRateBallsCousinsResDTO {
-    private Long numberSweepstakes;
-    private List<BallResDTO> rateBallsCousin;
+public class OccurrenceBallResDTO {
+    private Long Ball;
+    private List<Long> listOccurrenceBall;
 }

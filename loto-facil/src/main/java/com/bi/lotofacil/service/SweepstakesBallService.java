@@ -11,7 +11,7 @@ public class SweepstakesBallService {
     @Autowired
     private SweepstakesBallRepository repository;
 
-    public void insert(Long idBall, Long idSweepstake){
+    public void insert(Long idBall, Long idSweepstake) {
 
         SweepstakeBall sweepstakesBall = new SweepstakeBall(idBall, idSweepstake);
         repository.save(sweepstakesBall);

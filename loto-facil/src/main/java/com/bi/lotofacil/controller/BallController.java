@@ -15,17 +15,17 @@ public class BallController {
     private BallService ballService;
 
     @PostMapping
-    public BallSaveResDTO saveBall(@RequestBody BallSaveReqDTO dto){
+    public BallSaveResDTO saveBall(@RequestBody BallSaveReqDTO dto) {
         return BallSaveResDTO.of(this.ballService.saveBall(dto.getName()));
     }
 
     @GetMapping
-    public List<BallSaveResDTO> FindAllBall(){
+    public List<BallSaveResDTO> FindAllBall() {
         return BallSaveResDTO.findAll(this.ballService.findAllBall());
     }
 
     @GetMapping("/{id}")
-    public BallSaveResDTO FindByBall(@PathVariable("id") Long id){
+    public BallSaveResDTO FindByBall(@PathVariable("id") Long id) {
         return BallSaveResDTO.of(this.ballService.findById(id));
     }
 }

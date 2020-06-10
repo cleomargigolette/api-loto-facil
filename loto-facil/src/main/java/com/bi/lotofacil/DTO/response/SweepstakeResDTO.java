@@ -31,7 +31,7 @@ public class SweepstakeResDTO {
         return DTO;
     }
 
-    public static List<SweepstakeResDTO> mapDTO(List<Sweepstakes> list){
+    public static List<SweepstakeResDTO> mapDTO(List<Sweepstakes> list) {
         List<SweepstakeResDTO> listDTO = new ArrayList<>();
         list.forEach(sweepstakes -> {
             listDTO.add(of(sweepstakes));

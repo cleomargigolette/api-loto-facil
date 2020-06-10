@@ -21,10 +21,10 @@ public class SweepstakeBall {
     @GenericGenerator(name = "increment", strategy = "increment")
     private Long id;
 
-    @Column(name  = "ball_id")
+    @Column(name = "ball_id")
     private Long ballId;
 
-    @Column(name  = "sweepstakes_id")
+    @Column(name = "sweepstakes_id")
     private Long sweepstakesId;
 
     @ManyToOne
@@ -35,7 +35,7 @@ public class SweepstakeBall {
     @JoinColumn(name = "sweepstakes_id", insertable = false, updatable = false)
     private Sweepstakes sweepstakes;
 
-    public SweepstakeBall(Long idBall, Long idSweepstake){
+    public SweepstakeBall(Long idBall, Long idSweepstake) {
         this.ballId = idBall;
         this.sweepstakesId = idSweepstake;
     }

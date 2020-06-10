@@ -26,9 +26,9 @@ public class BallService {
         return this.ballRepository.findAll();
     }
 
-    public void createBall(){
-        for (int i = 1; i < 26; i++){
-            this.saveBall( new Long(i));
+    public void createBall() {
+        for (int i = 1; i < 26; i++) {
+            this.saveBall(new Long(i));
         }
     }
 }
